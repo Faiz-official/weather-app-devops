@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e40af,
+        #3b82f6,
+        #0ea5e9
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    gradientMove 15s ease infinite;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.weather-card{
+
+    width:700px;
+
+    background:
+    rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    color:white;
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+.search-box button{
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+.city{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.weather-icon{
+    display:block;
+    margin:auto;
+    width:120px;
+}
+
+.temp{
+    text-align:center;
+    font-size:80px;
+    font-weight:bold;
+}
+
+.description{
+    text-align:center;
+    font-size:24px;
+    text-transform:capitalize;
+}
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.box{
+
+    background:
+    rgba(255,255,255,0.15);
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-align:center;
+}
+
+.placeholder{
+    text-align:center;
+    margin-top:30px;
+    font-size:20px;
+}
+
+.weather-card{
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.weather-icon{
+
+    width:120px;
+
+    display:block;
+
+    margin:auto;
+
+    animation: rotateIcon 8s linear infinite;
+}
+
+@keyframes rotateIcon{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.fade-in{
+
+    animation:
+    fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
