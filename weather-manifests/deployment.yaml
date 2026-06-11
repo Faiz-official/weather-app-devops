@@ -21,7 +21,7 @@ spec:
 
       - name: weather-app
 
-        image: mydockerhub12/weather-app:4
+        image: mydockerhub12/weather-app:5
 
         ports:
         - containerPort: 80
