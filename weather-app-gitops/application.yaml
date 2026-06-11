@@ -3,31 +3,21 @@ kind: Application
 
 metadata:
   name: weather-app
-
   namespace: argocd
 
 spec:
-
   project: default
 
   source:
-
-    repoURL: https://github.com/Faiz-official/weather-app-gitops.git
-
-    targetRevision: HEAD
-
-    path: .
+    repoURL: https://github.com/Faiz-official/weather-app-devops.git
+    targetRevision: main
+    path: weather-app-gitops
 
   destination:
-
     server: https://kubernetes.default.svc
-
     namespace: weather
 
   syncPolicy:
-
     automated:
-
       prune: true
-
       selfHeal: true
