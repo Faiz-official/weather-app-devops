@@ -3,33 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Weather Dashboard Pro</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+<div class="background-overlay"></div>
 
 <div class="container">
 
     <div class="weather-card">
 
-        <h1>Weather Dashboard</h1>
+        <div class="header">
+
+            <h1>☀️ Weather Dashboard</h1>
+
+            <p class="subtitle">
+                Real-Time Weather Forecast
+            </p>
+
+        </div>
 
         <div class="search-box">
+
             <input
                 type="text"
                 id="city"
-                placeholder="Enter city name..."
+                placeholder="🔍 Search city..."
+                onkeypress="if(event.key==='Enter') getWeather()"
             >
 
             <button onclick="getWeather()">
                 Search
             </button>
+
         </div>
 
         <div id="weather-data">
 
-            <div class="placeholder">
-                Search for a city
+            <div class="welcome">
+
+                <div class="welcome-icon">
+                    🌎
+                </div>
+
+                <h2>Welcome</h2>
+
+                <p>
+                    Search any city to get live weather information.
+                </p>
+
             </div>
 
         </div>
@@ -38,7 +65,8 @@
 
 </div>
 
+</body>
+
 <script src="app.js"></script>
 
-</body>
 </html>
